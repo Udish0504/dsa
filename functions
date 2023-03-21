@@ -1,0 +1,131 @@
+//Question-1
+#include <iostream>
+using namespace std;
+int sum(int a ,int b){
+    return a+b;
+}
+int main() {
+    int x,y;
+    cout<<"Enter value of x:"<<endl;
+    cin>>x;
+    cout<<"Enter value of y:"<<endl;
+    cin>>y;
+    int s=sum(x,y);
+    cout<<"Sum is:"<<s<<endl;
+    return 0;
+}
+
+//Question-2
+#include <iostream>
+using namespace std;
+int maximum(int a ,int b,int c){
+    if(a>b && a>c){
+        cout<<a<<" is greatest";
+    }
+    else if(b>a && b>c){
+        cout<<b<<" is greatest";
+    }
+    else{
+        cout<<c<<" is greatest";
+    }
+}
+int main() {
+    int x,y,z;
+    cout<<"Enter value of x:"<<endl;
+    cin>>x;
+    cout<<"Enter value of y:"<<endl;
+    cin>>y;
+    cout<<"Enter value of z:"<<endl;
+    cin>>z;
+    maximum(x,y,z);
+    return 0;
+}
+
+//Question-3
+#include <iostream>
+using namespace std;
+int sumton(int n){
+    int sum=0;
+    for(int i=0;i<n+1;i++){
+        if(i%2==0){
+             sum=sum+i;
+        }
+    }
+    cout<<sum;
+}
+int main(){
+    int n;
+    cout<<"Enter the value of n :";
+    cin>>n;
+    sumton(n);
+}
+
+//Question-4
+#include <iostream>
+using namespace std;
+int fact(int n){
+    int fact=1;
+    for(int i=1;i<n+1;i++){
+        fact=fact*i;
+        }
+    cout<<fact;
+}
+int main(){
+    int n;
+    cout<<"Enter the value of n :";
+    cin>>n;
+    fact(n);
+}
+
+//Question-5
+#include <iostream>
+using namespace std;
+int reverse(int n){
+    int rev=0;
+    while(n!=0){
+        int r=n%10;
+        rev=rev*10+r;
+        n=n/10;
+    }
+    return rev;
+}
+
+int main(){
+    int n;
+    cout<<"Enter n:";
+    cin>>n;
+    int reversed=reverse(n);
+    cout<<"Reversed integer is : "<<reversed;
+    return 0;
+}
+
+//Question-6
+#include <iostream>
+using namespace std;
+
+bool isPrime(int n)
+{
+	if (n <= 1)
+		return false;
+
+	for (int i = 2; i < n; i++)
+		if (n % i == 0)
+			return false;
+
+	return true;
+}
+
+int main()
+{
+	int n;
+	cout<<"Enter number:";
+	cin>>n;
+	bool isprime=isPrime(n);
+	if(isprime){
+	    cout<<"Number is prime";
+	}
+	else{
+	    cout<<"Number is not prime";
+	}
+	return 0;
+}
